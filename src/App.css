@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/20118624/pexels-photo-20118624/free-photo-of-nature-soleil-couchant-coucher-de-soleil-coucher-du-soleil.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.App {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-container {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 20px; /* Ajout de marge en haut */
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info p {
+  margin: 5px 0;
+}
+
+.weather-info img {
+  margin-top: 10px;
+}
+
+.loading {
+  font-style: italic;
+}
+
+.cold .weather-container {
+  background-color: #4da0ff; /* Bleu pour le temps froid */
+}
+
+.hot .weather-container {
+  background-color: #ff6666; /* Rouge pour le temps chaud */
+}
+
+.normal .weather-container {
+  background-color: #6699ff; /* Bleu clair pour le temps normal */
+}
+
+.table-container {
+  overflow-x: auto; /* Ajout de défilement horizontal pour les tables larges */
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th,
+table td {
+  text-align: left; /* Modification pour une meilleure lisibilité */
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.coordinates-container {
+  margin-top: 20px;
+}
+
+
+.input-container {
+  position: relative;
+  height: 60px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: 5px;
+  font-size: 12px;
+}
+
+.input-container input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-container {
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.3); /* Couleur de fond semi-transparente */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Légèrement plus clair au survol */
+}
